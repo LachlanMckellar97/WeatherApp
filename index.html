@@ -8,48 +8,52 @@
     <title>Weather App</title>
 </head>
 <body>
+
+    <h1 id="heading">World Weather Forcast</h1>
+
     <div id="menu">
-        <h1>World Weather Forcast</h1>
+        <div id="searchspot">Search for a city:</div> 
         <input id="location" placeholder="Type a Location">
         <button id="searchlocation">Search</button>
         <div id="previousLocations"></div>
     </div>
-    <div id="results">
+    
+    <div id="results" class="hide">
         <h2 id="locationAndDate">test</h2>
         <img id="wicon" src="" alt="">
         <div id="temp">test</div>
         <div id="humidity">test</div>
         <div id="windspeed">test</div>
-        <div id="UVindex">test</div>
+        <div id="UVindex">UV index: <span id="UVindexspan"></span></div>
     </div>
 
-    <ul id="5dayforcast">
-        <h2>5 Day Forcast</h2>
-        <li class="5days">
+    <ul id="fivedayforcast" class="hide">
+        <h2>5 Day Forcast:</h2>
+        <li class="days">
             <div id="dayid1">test</div>
             <img id="wicon1" src="" alt="">
             <div id="tempday1"></div>
             <div id="humday1"></div>
         </li>
-        <li class="5days">
+        <li class="days">
             <div id="dayid2">test</div>
             <img id="wicon2" src="" alt="">
             <div id="tempday2"></div>
             <div id="humday2"></div>
         </li>
-        <li class="5days">
+        <li class="days">
             <div id="dayid3">test</div>
             <img id="wicon3" src="" alt="">
             <div id="tempday3"></div>
             <div id="humday3"></div>
         </li>
-        <li class="5days">
+        <li class="days">
             <div id="dayid4">test</div>
             <img id="wicon4" src="" alt="">
             <div id="tempday4"></div>
             <div id="humday4"></div>
         </li>
-        <li class="5days">
+        <li class="days">
             <div id="dayid5">test</div>
             <img id="wicon5" src="" alt="">
             <div id="tempday5"></div>
