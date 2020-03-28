@@ -51,7 +51,7 @@ function getweather() {
         $("#humidity").text("Humidity: " + (response.main.humidity) + "%");
         $("#windspeed").text("Wind Speed: " + (response.wind.speed) + "km/h");
         $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/uvi?appid=6bf240b1bc4ff00cea024200576460d7&lat=" + (response.coord.lat) + "&lon=" + (response.coord.lon),
+            url: "https://api.openweathermap.org/data/2.5/uvi?appid=6bf240b1bc4ff00cea024200576460d7&lat=" + (response.coord.lat) + "&lon=" + (response.coord.lon),
             method: "GET"
         })
         .then(function(response2) {
@@ -64,7 +64,7 @@ function getweather() {
         })
     })
     $.ajax({
-        url: "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&cnt=40&appid=6bf240b1bc4ff00cea024200576460d7&units=metric",
+        url: "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&cnt=40&appid=6bf240b1bc4ff00cea024200576460d7&units=metric",
         method: "GET"
     })
     .then(function(response3) {
