@@ -46,7 +46,7 @@ function getweather() {
     })
     .then(function(response) {
         $("#locationAndDate").text((response.name) + ": " + (moment().format('dddd') + " " + (moment().format("MMM Do YYYY"))));
-        $("#wicon").attr("src", ("http://openweathermap.org/img/w/" + (response.weather[0].icon) + ".png"));
+        $("#wicon").attr("src", ("https://openweathermap.org/img/w/" + (response.weather[0].icon) + ".png"));
         $("#temp").text("Temperature: " + (response.main.temp) + "°C");
         $("#humidity").text("Humidity: " + (response.main.humidity) + "%");
         $("#windspeed").text("Wind Speed: " + (response.wind.speed) + "km/h");
@@ -73,7 +73,7 @@ function getweather() {
         for (i = 1; i < days.length; i++) {
             var u = i * 8 - 1;
             $("#dayid" + [i]).text((response3.list[u].dt_txt).slice(0, 10));
-            $("#wicon" + [i]).attr("src", ("http://openweathermap.org/img/w/" + (response3.list[u].weather[0].icon) + ".png"));
+            $("#wicon" + [i]).attr("src", ("https://openweathermap.org/img/w/" + (response3.list[u].weather[0].icon) + ".png"));
             $("#tempday" + [i]).text("Temp: " + (response3.list[u].main.temp) + "°C");
             $("#humday" + [i]).text("Humidity: " + (response3.list[u].main.humidity) + "%");
         }
